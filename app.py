@@ -7,18 +7,18 @@ import io
 
 # Setup trang Streamlit
 st.set_page_config(page_title="AI Hỗ Trợ Giảng Dạy GDPT 2018", layout="wide")
-st.title("🎓 Ứng Dụng Xuất Bản Giáo Án, Slide & Đề Thi (CV 7991)")
+st.title("Ứng Dụng Xuất Bản Giáo Án, Slide & Đề Thi (theo Công văn 7991)")
 
 # Sidebar nhập API Key và Thông tin bài học
 st.sidebar.header("⚙️ Cấu hình")
 api_key = st.sidebar.text_input("Nhập Google Gemini API Key:", type="password")
 
 st.sidebar.header("📘 Thông tin bài học")
-subject = st.sidebar.text_input("Môn học:", "Tin học")
-grade = st.sidebar.text_input("Lớp:", "10")
-lesson_name = st.sidebar.text_input("Tên bài học:", "Thuật toán tìm kiếm nhị phân")
-duration = st.sidebar.text_input("Thời lượng (tiết):", "2")
-objectives = st.sidebar.text_area("Yêu cầu cần đạt (YCĐĐ):", "Học sinh hiểu được ý tưởng thuật toán và mô phỏng được các bước tìm kiếm nhị phân.")
+subject = st.sidebar.text_input("Môn học:", "Ngữ văn")
+grade = st.sidebar.text_input("Lớp:", "7")
+lesson_name = st.sidebar.text_input("Tên bài học:", "Nhập tên bài học")
+duration = st.sidebar.text_input("Thời lượng (tiết):", "1")
+objectives = st.sidebar.text_area("Yêu cầu cần đạt (YCĐĐ):", "Nhập yêu cầu cần đạt")
 
 # Hàm gọi AI Gemini
 def generate_educational_content(key):
